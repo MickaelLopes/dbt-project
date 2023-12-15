@@ -1,0 +1,40 @@
+config:
+  send_anonymous_usage_stats: False
+
+sde_dbt_tutorial:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: dbt
+      pass: password1234
+      dbname: dbt
+      schema: warehouse
+
+dbt_server_tuto:
+  target: dev
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: admin
+      pass: pass1234
+      dbname: warehouse
+      schema: jaffle_shop
+
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: prod
+      pass: pass1234
+      dbname: salesforce
+      schema: production
+
