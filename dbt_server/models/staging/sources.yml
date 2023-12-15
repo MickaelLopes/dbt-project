@@ -1,0 +1,15 @@
+version : 2 
+
+sources : 
+  - name: source
+    description : Data from application database that have been copy via EL tool
+    schema : source
+    tables :
+      - name : customers
+        description : > 
+          one record per customer. include customers that do not trade anymore
+        columns :  
+          - name : customer_id
+      - name : orders
+      - name : products
+      - name : payments

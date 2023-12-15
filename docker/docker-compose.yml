@@ -1,0 +1,22 @@
+version: '3'
+services:
+  production: 
+    container_name: warehouse
+    image: postgres:16
+    environment:
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: pass1234
+        POSTGRES_DB: warehouse
+    volumes:
+      - ./warehouse/raw_data:/input_data
+      - ./warehouse/setup:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 30s
+      timeout: 15s
+      retries: 5
+      start_period: 30s
+
+  
