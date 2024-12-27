@@ -4,7 +4,7 @@ This repository serves as both a tutorial and a showcase for learning and demons
 
 Each step of the project is organized within the `step` directory, where subfolders are named according to each step. These subfolders contain a detailed markdown document that describes the tasks and goals of that particular step, alongside any necessary supplementary files.
 
-The main dbt project files are located in the `dbt_project` directory. To facilitate learning progression and version control, the repository is tagged at the beginning of each step. Users can clone the repository at any specific step by checking out to the respective tag (e.g., `git checkout step2` for starting directly from Step 2).
+The main dbt project files are located in the `dbt_project` directory. To facilitate learning progression and version control, the repository is tagged at the beginning of each step. Users can clone the repository at any specific step by checking out to the respective tag (e.g., `git pull  https://github.com/MickaelLopes/dbt-project.git@step1 for starting directly from Step 2).
 
 ## Prerequisites
 
